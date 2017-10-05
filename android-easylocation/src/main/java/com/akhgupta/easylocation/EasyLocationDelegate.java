@@ -101,9 +101,10 @@ class EasyLocationDelegate {
         String message = TextUtils.isEmpty(easyLocationRequest.locationPermissionDialogMessage) ? activity.getString(R.string.location_permission_dialog_message) : easyLocationRequest.locationPermissionDialogMessage;
         String negativeButtonTitle = TextUtils.isEmpty(easyLocationRequest.locationPermissionDialogNegativeButtonText) ? activity.getString(android.R.string.cancel) : easyLocationRequest.locationPermissionDialogNegativeButtonText;
         String positiveButtonTitle = TextUtils.isEmpty(easyLocationRequest.locationPermissionDialogPositiveButtonText) ? activity.getString(android.R.string.ok) : easyLocationRequest.locationPermissionDialogPositiveButtonText;
-        new AlertDialog.Builder(activity)
+        new AlertDialog.Builder(activity, R.style.AlertDialogTheme)
                 .setCancelable(true)
                 .setTitle(title)
+                .setIcon(R.drawable.ic_location_on_white)
                 .setMessage(message)
                 .setNegativeButton(negativeButtonTitle, new DialogInterface.OnClickListener() {
                     @Override
@@ -124,9 +125,10 @@ class EasyLocationDelegate {
         String message = TextUtils.isEmpty(easyLocationRequest.locationSettingsDialogMessage) ? activity.getString(R.string.open_location_settings) : easyLocationRequest.locationSettingsDialogMessage;
         String negativeButtonText = TextUtils.isEmpty(easyLocationRequest.locationSettingsDialogNegativeButtonText) ? activity.getString(android.R.string.cancel) : easyLocationRequest.locationSettingsDialogNegativeButtonText;
         String positiveButtonText = TextUtils.isEmpty(easyLocationRequest.locationSettingsDialogPositiveButtonText) ? activity.getString(android.R.string.ok) : easyLocationRequest.locationSettingsDialogPositiveButtonText;
-        new AlertDialog.Builder(activity)
+        new AlertDialog.Builder(activity, R.style.AlertDialogTheme)
                 .setCancelable(true)
                 .setTitle(title)
+                .setIcon(R.drawable.ic_location_on_white)
                 .setMessage(message)
                 .setNegativeButton(negativeButtonText, new DialogInterface.OnClickListener() {
                     @Override
